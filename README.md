@@ -11,11 +11,11 @@ https://cnpj.biz/app/api
   
 ![atl-text](https://github.com/maiconcesarvaz/BIZpcf/blob/master/ExemploConfig/urlFlow.JPG)  
 
-2 - via cmd navegar até a pasta do projeto e executar o seguinte comando: 
+2 - Via cmd navegar até a pasta do projeto e executar o seguinte comando: 
 
-      npm install      
+		npm install      
       
-3 - ápós isso logar no seu dynamics via linha de comando
+3 - Após isso logar no seu dynamics via linha de comando
 
 		auth create --url https://SUAORG.crm2.dynamics.com
 
