@@ -9,7 +9,7 @@ https://cnpj.biz/app/api
 # Instalação
 1 - Importar em seu Dynamics a solução Flow e nela obter a url para chamada do flow  (no fonte explico a razão disso).
   
-	![atl-text](https://github.com/maiconcesarvaz/BIZpcf/blob/master/ExemploConfig/urlFlow.JPG)  
+![atl-text](https://github.com/maiconcesarvaz/BIZpcf/blob/master/ExemploConfig/urlFlow.JPG)  
 
 2 - via cmd navegar até a pasta do projeto e executar o seguinte comando: 
 
@@ -25,7 +25,7 @@ https://cnpj.biz/app/api
 
 5 - Criar uma nova solução ou adicionar a entidade desejada na solução criada e em seguida mapear os campos conforme imagem na pasta exemplo config.
 
-	![atl-text](https://github.com/maiconcesarvaz/BIZpcf/blob/master/ExemploConfig/InserirConfigDynamics.JPG)
+![atl-text](https://github.com/maiconcesarvaz/BIZpcf/blob/master/ExemploConfig/InserirConfigDynamics.JPG)
 
 6 - Por ultimo, Salvar e publicar.
 
