@@ -30,4 +30,4 @@ https://cnpj.biz/app/api
 6 - Por ultimo, Salvar e publicar.
 
   
-*Ficarei feliz em receber sugestões para resolver o problema com o Cors e com isso remover da solução o Flow, ou dicas para melhorar o codigo.
+*Ficarei feliz em receber sugestões para resolver o problema com o Cors e com isso remover da solução o Flow, ou até mesmo dicas para melhorar o codigo.
