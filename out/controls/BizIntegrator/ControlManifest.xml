@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<manifest>
+  <control namespace="BizNamespace" constructor="BizIntegrator" version="0.0.1" display-name-key="BizIntegrator" description-key="BizIntegrator description" control-type="standard" api-version="1.2.3">
+    <property name="CNPJProperty" display-name-key="Cnpj" description-key="Campo CNPJ no CRM Cliente" of-type="SingleLine.Text" usage="bound" required="true"/>
+    <property name="apiBIZkey" display-name-key="API KEY" description-key="Chave da API fornecida pela Equipe BIZ" of-type="SingleLine.Text" usage="input" required="true"/>
+    <property name="flowUrlPart1" display-name-key="Url Flow Part 1" description-key="Bug conhecido - Input não está aceitando mais que 160 caracteres - informe a url em duas partes" of-type="SingleLine.Text" usage="input" required="true"/>
+    <property name="flowUrlPart2" display-name-key="Url Flow Part 2" description-key="Url do Flow importado com a solução" of-type="SingleLine.Text" usage="input" required="true"/>
+    <property name="email" display-name-key="email" description-key="E=mail" of-type="SingleLine.Email" usage="bound" required="false"/>
+    <property name="razao_social" display-name-key="razao_social" description-key="Razão Social" of-type="SingleLine.Text" usage="bound" required="false"/>
+    <property name="nome_fantasia" display-name-key="nome_fantasia" description-key="Nome Fantasia" of-type="SingleLine.Text" usage="bound" required="false"/>
+    <property name="data_abertura" display-name-key="data_abertura" description-key="Data Abertura" of-type="SingleLine.Text" usage="bound" required="false"/>
+    <property name="capital_social" display-name-key="capital_social" description-key="Capital Social" of-type="SingleLine.Text" usage="bound" required="false"/>
+    <property name="matriz_filial" display-name-key="matriz_filial" description-key="Matriz ou Filial" of-type="SingleLine.Text" usage="bound" required="false"/>
+    <property name="situacao" display-name-key="Situação" description-key="Situação" of-type="SingleLine.Text" usage="bound" required="false"/>
+    <property name="natureza_juridica" display-name-key="Natureza_juridica" description-key="" of-type="SingleLine.Text" usage="bound" required="false"/>
+    <property name="cep" display-name-key="cep" description-key="CEP" of-type="SingleLine.Text" usage="bound" required="false"/>
+    <property name="logradouro" display-name-key="Logradouro" description-key="" of-type="SingleLine.Text" usage="bound" required="false"/>
+    <property name="tipo_logradouro" display-name-key="Tipo_logradouro" description-key="Tipo logradouro" of-type="SingleLine.Text" usage="bound" required="false"/>
+    <property name="numero" display-name-key="Número" description-key="Número" of-type="SingleLine.Text" usage="bound" required="false"/>
+    <property name="complemento" display-name-key="complemento" description-key="Complemento" of-type="SingleLine.Text" usage="bound" required="false"/>
+    <property name="bairro" display-name-key="bairro" description-key="Bairro" of-type="SingleLine.Text" usage="bound" required="false"/>
+    <property name="cidade" display-name-key="cidade" description-key="Cidade" of-type="SingleLine.Text" usage="bound" required="false"/>
+    <property name="estado" display-name-key="estado" description-key="Estado" of-type="SingleLine.Text" usage="bound" required="false"/>
+    <property name="pais" display-name-key="pais" description-key="Pais" of-type="SingleLine.Text" usage="bound" required="false"/>
+    <property name="telefoneComercial" display-name-key="Telefone Comercial" description-key="Telefone Comercial" of-type="SingleLine.Phone" usage="bound" required="false"/>
+    <property name="CNAEcodigo" display-name-key="CNAE Codigo" description-key="Código do CNAE" of-type="SingleLine.Text" usage="bound" required="false"/>
+    <property name="CNAEdescricao" display-name-key="CNAE Descrição" description-key="Descrição do CNAE" of-type="SingleLine.Text" usage="bound" required="false"/>
+    <resources>
+      <code path="bundle.js" order="1"/>
+    </resources>
+    <built-by name="pac" version="1.5.4"/>
+  </control>
+</manifest>
