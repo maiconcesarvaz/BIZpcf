@@ -23,9 +23,9 @@ https://cnpj.biz/app/api
 
 		pac pcf push --publisher-prefix SEUPREFIXO
 
-5 - Criar uma nova solução ou adicionar a entidade desejada na solução criada e em seguida mapear os campos conforme imagem na pasta exemplo config.
+5 - Criar uma nova solução ou adicionar a entidade desejada na solução criada e em seguida mapear os campos:
 
-![atl-text](https://github.com/maiconcesarvaz/BIZpcf/blob/master/ExemploConfig/InserirConfigDynamics.JPG)
+![atl-text](https://github.com/maiconcesarvaz/BIZpcf/blob/master/ExemploConfig/ConfigSolution.gif)
 
 6 - Por ultimo, Salvar e publicar.
 
