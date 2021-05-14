@@ -1,7 +1,7 @@
 # Componente BIZ integrator
 A função do componente é validar o CNPJ informado e colocá-lo no padrão: xx.xxx.xxx/xxxx-xx, se estiver correto buscará os dados de cliente na API BIZ:
 
-https://cnpj.biz/app/api
+https://cnpj.biz/microsoft-dynamics-365-integracao-dados-empresas-cnpj
 
 * Antes de usar é preciso fazer o cadastro na API e obter a chave de autenticação
 
