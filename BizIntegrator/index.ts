@@ -17,6 +17,7 @@ export class BizIntegrator implements ComponentFramework.StandardControl<IInputs
 	private _cidadeValue: string;
 	private _cepValue: string;
 	private _logradouroValue: string;
+	private _numeroValue: string;
 	private _estadoValue: string;
 	private _paisValue: string;
 	private _razaoSocialValue: string;
@@ -24,6 +25,9 @@ export class BizIntegrator implements ComponentFramework.StandardControl<IInputs
 	private _dataAberturaValue: string;
 	private _emailValue: string;
 	private _telefoneValue: string;
+
+	private _CnaeCodValue: string;
+	private _CnaeDesValue: string;
 
 	private _result: string;
 	private _apiKey: string;
@@ -126,14 +130,17 @@ export class BizIntegrator implements ComponentFramework.StandardControl<IInputs
 			bairro: this._bairrovalue,
 			cidade: this._cidadeValue,
 			cep: this._cepValue,
-			logradouro: this._logradouroValue,			
+			logradouro: this._logradouroValue,
+			numero: this._numeroValue,
 			estado: this._estadoValue,
 			pais: this._paisValue,
 			razao_social: this._razaoSocialValue,
 			nome_fantasia: this._nomeFantasiaValue,
 			data_abertura: this._dataAberturaValue,
 			email: this._emailValue,
-			telefoneComercial: this._telefoneValue
+			telefoneComercial: this._telefoneValue,
+			CNAEcodigo: this._CnaeCodValue,
+			CNAEdescricao: this._CnaeDesValue,
 		};
 	}
 
@@ -184,7 +191,8 @@ export class BizIntegrator implements ComponentFramework.StandardControl<IInputs
 						_this._labelElement.innerText = "Busca realizada";
 						_this._bairrovalue = result.endereco.bairro;
 						_this._cepValue = result.endereco.cep;
-						_this._logradouroValue = result.endereco.logradouro + "," + result.endereco.numero;
+						_this._logradouroValue = result.endereco.logradouro;
+						_this._numeroValue = result.endereco.numero;
 						_this._cidadeValue = result.endereco.cidade.nome;
 						_this._estadoValue = result.endereco.estado.nome;
 						_this._paisValue = result.endereco.pais.nome;
@@ -193,6 +201,10 @@ export class BizIntegrator implements ComponentFramework.StandardControl<IInputs
 						_this._dataAberturaValue = result.data_abertura;
 						_this._emailValue = result.email;
 						_this._telefoneValue = result.telefones[0].telefone;
+
+						_this._CnaeCodValue = result.atividades.principal[0].codigo;
+						_this._CnaeDesValue = result.atividades.principal[0].nome;
+
 						_this._notifyOutputChanged();
 					}
 					else {
@@ -208,19 +220,21 @@ export class BizIntegrator implements ComponentFramework.StandardControl<IInputs
 	}
 
 	private validarCNPJ(cnpj : string) {
-		var numeros: any, digitos: any, soma: any, i: any, resultado: any, pos: any, tamanho: any, digitos_iguais: any;
+	var numeros: any, digitos: any, soma: any, i: any, resultado: any, pos: any, tamanho: any, digitos_iguais: any;
 	digitos_iguais = 1;
-	if (cnpj.length < 14 && cnpj.length < 15)
+	var exp = /\-|\.|\/|\(|\)| /g
+	var auxValue = cnpj.replace(exp, "");
+	if (auxValue.length < 14 && auxValue.length < 15)
 		return false;
-	for (i = 0; i < cnpj.length - 1; i++)
-		if (cnpj.charAt(i) != cnpj.charAt(i + 1)) {
+		for (i = 0; i < auxValue.length - 1; i++)
+			if (auxValue.charAt(i) != auxValue.charAt(i + 1)) {
 			digitos_iguais = 0;
 			break;
 		}
 	if (!digitos_iguais) {
-		tamanho = cnpj.length - 2
-		numeros = cnpj.substring(0, tamanho);
-		digitos = cnpj.substring(tamanho);
+		tamanho = auxValue.length - 2
+		numeros = auxValue.substring(0, tamanho);
+		digitos = auxValue.substring(tamanho);
 		soma = 0;
 		pos = tamanho - 7;
 		for (i = tamanho; i >= 1; i--) {
@@ -232,7 +246,7 @@ export class BizIntegrator implements ComponentFramework.StandardControl<IInputs
 		if (resultado != digitos.charAt(0))
 			return false;
 		tamanho = tamanho + 1;
-		numeros = cnpj.substring(0, tamanho);
+		numeros = auxValue.substring(0, tamanho);
 		soma = 0;
 		pos = tamanho - 7;
 		for (i = tamanho; i >= 1; i--) {

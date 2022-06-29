@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{c9e7ec2d-efca-4e4c-b3e3-f63c4bba5e4b}</formid>
+    <IntroducedVersion>6.0.0.0</IntroducedVersion>
+    <FormPresentation>0</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form maxWidth="1900">
+      <tabs>
+        <tab id="{8ca48364-f790-43e4-b753-aa35fa4f9c77}" name="tab_1" expanded="true" locklevel="0" showlabel="false" IsUserDefined="0" ordinalvalue="0">
+          <columns>
+            <column width="33%" id="0">
+              <sections>
+                <section id="{bcee7abc-6004-49f3-bc27-9eb7d1d3561b}" name="tab_1_column_1_section_1" columns="1" showlabel="true" showbar="false" IsUserDefined="0" locklevel="0" labelwidth="115" celllabelalignment="Left" celllabelposition="Left" ordinalvalue="0">
+                  <rows>
+                    <row>
+                      <cell id="{1b493db6-167b-6b45-a790-8039e48ba201}" showlabel="true" locklevel="0" ordinalvalue="10001" solutionaction="Removed" />
+                    </row>
+                    <row>
+                      <cell id="{2474eddd-e6a0-571c-18b7-13e4e9b0abaa}" showlabel="true" locklevel="0" ordinalvalue="10001" solutionaction="Added">
+                        <labels>
+                          <label description="CNPJ" languagecode="1033" />
+                        </labels>
+                        <control id="kcs_cnpj" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="kcs_cnpj" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a3e1698b-a2c1-cd2b-60e8-605697925716}" showlabel="true" locklevel="0" ordinalvalue="10003" solutionaction="Added">
+                        <labels>
+                          <label description="Relationship Type" languagecode="1033" />
+                        </labels>
+                        <control id="customertypecode" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="customertypecode" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="33%" id="1">
+              <sections>
+                <section id="{32ff71fb-26e6-4b51-8e93-e94b5780a8ae}" name="tab_1_column_2_section_1" columns="1" showlabel="false" showbar="false" IsUserDefined="0" locklevel="0" labelwidth="115" celllabelalignment="Left" celllabelposition="Left" visible="false" ordinalvalue="0" solutionaction="Modified">
+                  <rows>
+                    <row>
+                      <cell id="{0b52c646-e775-1bd7-5943-3b5397543993}" showlabel="false" userspacer="true" ordinalvalue="10000" solutionaction="Removed" />
+                    </row>
+                    <row>
+                      <cell id="{ebb8e093-c034-a6d1-e4d3-e43923ec1d7d}" showlabel="true" locklevel="0" ordinalvalue="10001" solutionaction="Removed" />
+                    </row>
+                    <row>
+                      <cell id="{d0c7e234-97a8-473c-39d9-78381c372375}" showlabel="true" locklevel="0" ordinalvalue="10002" solutionaction="Removed" />
+                    </row>
+                    <row>
+                      <cell id="{4b76aee6-8414-a9d0-3066-78ed2ed42eb8}" showlabel="true" locklevel="0" rowspan="2" ordinalvalue="10003" solutionaction="Removed" />
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="33%" id="2">
+              <sections>
+                <section id="{a549aa16-a731-41b7-9181-86710f8feef5}" name="tab_1_column_3_section_1" columns="1" showlabel="true" showbar="false" IsUserDefined="0" locklevel="0" labelwidth="115" celllabelalignment="Left" celllabelposition="Left" visible="false" ordinalvalue="0" solutionaction="Modified">
+                  <rows>
+                    <row>
+                      <cell id="{62E808A5-4DB5-4D56-9620-37EBAC8AFF72}" showlabel="true" locklevel="0" ordinalvalue="10000" solutionaction="Removed" />
+                    </row>
+                    <row>
+                      <cell id="{30B0C670-408A-42B1-B373-607936DE2C8F}" showlabel="true" locklevel="0" ordinalvalue="10001" solutionaction="Removed" />
+                    </row>
+                    <row>
+                      <cell id="{0794FA63-F298-4831-BD5A-B3F46A91F146}" showlabel="true" locklevel="0" ordinalvalue="10002" solutionaction="Removed" />
+                    </row>
+                    <row>
+                      <cell id="{C5E57D6C-8A9E-4A0D-89ED-D3F5B59B57AA}" showlabel="true" locklevel="0" ordinalvalue="10003" solutionaction="Removed" />
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <LocalizedNames>
+      <LocalizedName description="Criação Rápida de Conta" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="Formulário padrão de criação rápida de Conta" languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

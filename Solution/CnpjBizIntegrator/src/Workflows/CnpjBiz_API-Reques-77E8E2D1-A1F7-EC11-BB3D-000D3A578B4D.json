@@ -1,0 +1,114 @@
+{
+  "properties": {
+    "connectionReferences": {},
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "manual": {
+          "metadata": {
+            "operationMetadataId": "7e7cf1d5-15d5-4edd-b911-7aec92461d20"
+          },
+          "type": "Request",
+          "kind": "Http",
+          "inputs": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string"
+                },
+                "properties": {
+                  "type": "object",
+                  "properties": {
+                    "cnpj": {
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "Biz_key": {
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "actions": {
+        "HTTP": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "8afe293f-12e6-4c70-a53e-d923628a3634"
+          },
+          "type": "Http",
+          "inputs": {
+            "method": "POST",
+            "uri": "https://cnpj.biz/api/v1/empresas/cnpj",
+            "headers": {
+              "Content-Type": "application/json",
+              "Accept": "application/json",
+              "authorization": "Bearer @{triggerBody()?['Biz_key']}"
+            },
+            "body": {
+              "cnpj": "@triggerBody()?['cnpj']"
+            }
+          }
+        },
+        "Inicializar_variável": {
+          "runAfter": {
+            "HTTP": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "fcc586c2-efd2-4236-a4f9-314edadb1460"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "body",
+                "type": "object",
+                "value": "@body('HTTP')"
+              }
+            ]
+          }
+        },
+        "Resposta": {
+          "runAfter": {
+            "Inicializar_variável": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "2378eeed-a092-4e05-954f-78be12bd65d4"
+          },
+          "type": "Response",
+          "kind": "Http",
+          "inputs": {
+            "statusCode": 200,
+            "body": "@variables('body')"
+          }
+        }
+      },
+      "outputs": {}
+    }
+  },
+  "schemaVersion": "1.0.0.0"
+}

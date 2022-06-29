@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityRelationships xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <EntityRelationship Name="msdyn_msdyn_segment_account">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>Account</ReferencingEntityName>
+    <ReferencedEntityName>msdyn_segment</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>msdyn_segmentid</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for Segment associated with account." languagecode="127" />
+        <Description description="Jedinečný identifikátor segmentu přidruženého k account" languagecode="1029" />
+        <Description description="Identificador único del segmento asociado a account." languagecode="3082" />
+        <Description description="Jedinstveni identifikator za segment povezan s account." languagecode="1050" />
+        <Description description="Enolični identifikator za segment, ki je povezan z account." languagecode="1060" />
+        <Description description="Eindeutiger Bezeichner für das Segment, das account zugeordnet ist." languagecode="1031" />
+        <Description description="Unique identifier for Segment associated with account." languagecode="1033" />
+        <Description description="Jedinstveni identifikator segmenta povezanog sa account." languagecode="2074" />
+        <Description description="Уникальный идентификатор сегмента, связанного с account." languagecode="1049" />
+        <Description description="与 account 关联的客户细分的唯一标识符。" languagecode="2052" />
+        <Description description="account ile ilişkili Segmentin benzersiz tanımlayıcısı." languagecode="1055" />
+        <Description description="Olemiga account seostatud segmendi ainuidentifikaator." languagecode="1061" />
+        <Description description="Mã định danh duy nhất cho Phân khúc được liên kết với account." languagecode="1066" />
+        <Description description="Унікальний ідентифікатор сегмента, пов’язаного з account." languagecode="1058" />
+        <Description description="Unik identifierare för segmentet som är associerat med account." languagecode="1053" />
+        <Description description="account entitatearekin erlazionatutako segmentuaren identifikatzaile esklusiboa." languagecode="1069" />
+        <Description description="account से संबद्ध अनुभाग के लिए युनीक आइडेंटिफ़ायर." languagecode="1081" />
+        <Description description="Јединствени идентификатор сегмента повезаног са account." languagecode="3098" />
+        <Description description="Pengidentifikasi unik untuk Segmen yang terkait dengan account." languagecode="1057" />
+        <Description description="Unieke id van het segment dat is gekoppeld aan de account." languagecode="1043" />
+        <Description description="Μοναδικό αναγνωριστικό για το τμήμα που σχετίζεται με account." languagecode="1032" />
+        <Description description="Identificador único do segmento asociado ao account." languagecode="1110" />
+        <Description description="與 account 相關聯之客戶細分的唯一識別碼。" languagecode="3076" />
+        <Description description="Identificatore univoco del segmento associato a account." languagecode="1040" />
+        <Description description="account нысанымен байланысты сегменттің бір мәнді идентификаторы." languagecode="1087" />
+        <Description description="المعرف الفريد للشريحة المقترنة بـ account." languagecode="1025" />
+        <Description description="Identificador únic del segment associat a account." languagecode="1027" />
+        <Description description="Jednoznačný identifikátor segmentu priradeného k entite account." languagecode="1051" />
+        <Description description="Identificador exclusivo do Segmento associado a account." languagecode="2070" />
+        <Description description="Ar account saistītā segmenta unikālais identifikators." languagecode="1062" />
+        <Description description="Kohteeseen account liittyvän segmentin yksilöivä tunnus." languagecode="1035" />
+        <Description description="Identificador exclusivo do segmento associado ao account." languagecode="1046" />
+        <Description description="account에 연결된 세그먼트의 고유 식별자." languagecode="1042" />
+        <Description description="Unik identifikator for segmentet som er knyttet til account." languagecode="1044" />
+        <Description description="Unikatowy identyfikator segmentu skojarzonego z encją account." languagecode="1045" />
+        <Description description="與 account 相關聯之客戶細分的唯一識別碼。" languagecode="1028" />
+        <Description description="Identificateur unique du segment associé à account." languagecode="1036" />
+        <Description description="รหัสเฉพาะของเซ็กเมนต์ที่เชื่อมโยงกับ account" languagecode="1054" />
+        <Description description="Entydigt id for det segment, der er tilknyttet account." languagecode="1030" />
+        <Description description="Pengecam unik untuk Segmen yang dikaitkan dengan account." languagecode="1086" />
+        <Description description="A következőhöz társított szegmens egyedi azonosítója: account." languagecode="1038" />
+        <Description description="Su account susieto segmento unikalusis identifikatorius." languagecode="1063" />
+        <Description description="account に関連付けられたセグメントを表す一意識別子です。" languagecode="1041" />
+        <Description description="המזהה הייחודי של הפלח המשויך ל- account." languagecode="1037" />
+        <Description description="Identificatorul unic al segmentului asociat cu account." languagecode="1048" />
+        <Description description="Еднозначен идентификатор на сегмента, свързан с account." languagecode="1026" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>DoNotDisplay</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavigationPropertyName>msdyn_segmentid</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>msdyn_msdyn_segment_account</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+</EntityRelationships>

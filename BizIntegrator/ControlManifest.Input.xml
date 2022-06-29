@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest>
-  <control namespace="BizNamespace" constructor="BizIntegrator" version="0.0.1" display-name-key="BizIntegrator" description-key="BizIntegrator description" control-type="standard">
+  <control namespace="BizNamespace" constructor="BizIntegrator" version="1.0.5" display-name-key="BizIntegrator" description-key="BizIntegrator description" control-type="standard">
     <property name="CNPJProperty" display-name-key="Cnpj" description-key="Campo CNPJ no CRM Cliente" of-type="SingleLine.Text" usage="bound" required="true" />
     <property name="apiBIZkey" display-name-key="API KEY" description-key="Chave da API fornecida pela Equipe BIZ" of-type="SingleLine.Text" usage="input" required="true" />
     <property name="flowUrlPart1" display-name-key="Url Flow Part 1" description-key="Bug conhecido - Input não está aceitando mais que 160 caracteres - informe a url em duas partes" of-type="SingleLine.Text" usage="input" required="true" />
@@ -26,7 +26,7 @@
     <property name="CNAEcodigo" display-name-key="CNAE Codigo" description-key="Código do CNAE" of-type="SingleLine.Text" usage="bound" required="false" />
     <property name="CNAEdescricao" display-name-key="CNAE Descrição" description-key="Descrição do CNAE" of-type="SingleLine.Text" usage="bound" required="false" />
     <resources>
-      <code path="index.ts" order="1"/>      
-    </resources>    
+      <code path="index.ts" order="1" />
+    </resources>
   </control>
 </manifest>
