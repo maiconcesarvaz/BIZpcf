@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <manifest>
-  <control namespace="BizNamespace" constructor="BizIntegrator" version="1.0.5" display-name-key="BizIntegrator" description-key="BizIntegrator description" control-type="standard">
+  <control namespace="BizNamespace" constructor="BizIntegrator" version="1.0.23" display-name-key="BizIntegrator" description-key="BizIntegrator description" control-type="standard">
     <property name="CNPJProperty" display-name-key="Cnpj" description-key="Campo CNPJ no CRM Cliente" of-type="SingleLine.Text" usage="bound" required="true" />
     <property name="apiBIZkey" display-name-key="API KEY" description-key="Chave da API fornecida pela Equipe BIZ" of-type="SingleLine.Text" usage="input" required="true" />
     <property name="flowUrlPart1" display-name-key="Url Flow Part 1" description-key="Bug conhecido - Input não está aceitando mais que 160 caracteres - informe a url em duas partes" of-type="SingleLine.Text" usage="input" required="true" />
@@ -22,6 +22,7 @@
     <property name="cidade" display-name-key="cidade" description-key="Cidade" of-type="SingleLine.Text" usage="bound" required="false" />
     <property name="estado" display-name-key="estado" description-key="Estado" of-type="SingleLine.Text" usage="bound" required="false" />
     <property name="pais" display-name-key="pais" description-key="Pais" of-type="SingleLine.Text" usage="bound" required="false" />
+    <property name="porte_empresa" display-name-key="Porte" description-key="Porte" of-type="SingleLine.Text" usage="bound" required="false" />
     <property name="telefoneComercial" display-name-key="Telefone Comercial" description-key="Telefone Comercial" of-type="SingleLine.Phone" usage="bound" required="false" />
     <property name="CNAEcodigo" display-name-key="CNAE Codigo" description-key="Código do CNAE" of-type="SingleLine.Text" usage="bound" required="false" />
     <property name="CNAEdescricao" display-name-key="CNAE Descrição" description-key="Descrição do CNAE" of-type="SingleLine.Text" usage="bound" required="false" />
