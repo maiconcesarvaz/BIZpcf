@@ -51,31 +51,100 @@
         }
       },
       "actions": {
-        "HTTP": {
-          "runAfter": {},
-          "metadata": {
-            "operationMetadataId": "8afe293f-12e6-4c70-a53e-d923628a3634"
-          },
-          "type": "Http",
-          "inputs": {
-            "method": "POST",
-            "uri": "https://cnpj.biz/api/v1/empresas/cnpj",
-            "headers": {
-              "Content-Type": "application/json",
-              "Accept": "application/json",
-              "authorization": "Bearer @{triggerBody()?['Biz_key']}"
+        "Try": {
+          "actions": {
+            "HTTP": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "8afe293f-12e6-4c70-a53e-d923628a3634"
+              },
+              "type": "Http",
+              "inputs": {
+                "method": "POST",
+                "uri": "https://cnpj.biz/api/v2/empresas/cnpj",
+                "headers": {
+                  "Content-Type": "application/json",
+                  "Accept": "application/json",
+                  "authorization": "Bearer @{triggerBody()?['Biz_key']}"
+                },
+                "body": {
+                  "cnpj": "@triggerBody()?['cnpj']"
+                },
+                "retryPolicy": {
+                  "type": "none"
+                }
+              }
             },
-            "body": {
-              "cnpj": "@triggerBody()?['cnpj']"
+            "Set_variable": {
+              "runAfter": {
+                "HTTP": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "3f1b6415-b3b4-4dfc-a108-49e2e8092503"
+              },
+              "type": "SetVariable",
+              "inputs": {
+                "name": "body",
+                "value": "@body('HTTP')"
+              }
+            },
+            "Resposta": {
+              "runAfter": {
+                "Set_variable": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "2378eeed-a092-4e05-954f-78be12bd65d4"
+              },
+              "type": "Response",
+              "kind": "Http",
+              "inputs": {
+                "statusCode": 200,
+                "body": "@variables('body')"
+              }
             }
-          }
-        },
-        "Inicializar_variável": {
+          },
           "runAfter": {
-            "HTTP": [
+            "Inicializar_variável": [
               "Succeeded"
             ]
           },
+          "metadata": {
+            "operationMetadataId": "62c208e4-0fa6-4277-ba22-42cf2d7a3f64"
+          },
+          "type": "Scope"
+        },
+        "Catch": {
+          "actions": {
+            "Response": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "c9b307ae-4095-40c6-ab40-471abf206875"
+              },
+              "type": "Response",
+              "kind": "Http",
+              "inputs": {
+                "statusCode": 500,
+                "body": "Este CNPJ é invalido ou não existe na nossa base de dados. Confira e selecione a ação novamente!"
+              }
+            }
+          },
+          "runAfter": {
+            "Try": [
+              "Failed",
+              "Skipped"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "6a41a23b-9581-4d2c-91d6-406438b079b9"
+          },
+          "type": "Scope"
+        },
+        "Inicializar_variável": {
+          "runAfter": {},
           "metadata": {
             "operationMetadataId": "fcc586c2-efd2-4236-a4f9-314edadb1460"
           },
@@ -84,31 +153,15 @@
             "variables": [
               {
                 "name": "body",
-                "type": "object",
-                "value": "@body('HTTP')"
+                "type": "object"
               }
             ]
-          }
-        },
-        "Resposta": {
-          "runAfter": {
-            "Inicializar_variável": [
-              "Succeeded"
-            ]
-          },
-          "metadata": {
-            "operationMetadataId": "2378eeed-a092-4e05-954f-78be12bd65d4"
-          },
-          "type": "Response",
-          "kind": "Http",
-          "inputs": {
-            "statusCode": 200,
-            "body": "@variables('body')"
           }
         }
       },
       "outputs": {}
-    }
+    },
+    "templateName": ""
   },
   "schemaVersion": "1.0.0.0"
 }
