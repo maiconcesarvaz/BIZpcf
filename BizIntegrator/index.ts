@@ -18,11 +18,22 @@ export class BizIntegrator implements ComponentFramework.StandardControl<IInputs
 	private _cepValue: string;
 	private _logradouroValue: string;
 	private _numeroValue: string;
+	private _complementoValue: string;
+	private _tipologradouroValue: string;
 	private _estadoValue: string;
 	private _paisValue: string;
 	private _razaoSocialValue: string;
 	private _nomeFantasiaValue: string;
 	private _dataAberturaValue: string;
+
+
+	private _capitalSocialValue: string;
+	private _matrizFilialValue: string;
+    private _situacaoValue: string;
+	private _naturezaJuridicaValue: string;
+	private _porteValue: string;
+
+
 	private _emailValue: string;
 	private _telefoneValue: string;
 
@@ -132,6 +143,8 @@ export class BizIntegrator implements ComponentFramework.StandardControl<IInputs
 			cep: this._cepValue,
 			logradouro: this._logradouroValue,
 			numero: this._numeroValue,
+			complemento: this._complementoValue,
+			tipo_logradouro: this._tipologradouroValue,
 			estado: this._estadoValue,
 			pais: this._paisValue,
 			razao_social: this._razaoSocialValue,
@@ -141,6 +154,11 @@ export class BizIntegrator implements ComponentFramework.StandardControl<IInputs
 			telefoneComercial: this._telefoneValue,
 			CNAEcodigo: this._CnaeCodValue,
 			CNAEdescricao: this._CnaeDesValue,
+			capital_social: this._capitalSocialValue,
+			matriz_filial: this._matrizFilialValue,
+			situacao: this._situacaoValue,
+			natureza_juridica: this._naturezaJuridicaValue,
+			porte_empresa: this._porteValue,
 		};
 	}
 
@@ -193,6 +211,8 @@ export class BizIntegrator implements ComponentFramework.StandardControl<IInputs
 						_this._cepValue = result.endereco.cep;
 						_this._logradouroValue = result.endereco.logradouro;
 						_this._numeroValue = result.endereco.numero;
+						_this._complementoValue = result.endereco.complemento;
+						_this._tipologradouroValue = result.endereco.tipo_logradouro;
 						_this._cidadeValue = result.endereco.cidade.nome;
 						_this._estadoValue = result.endereco.estado.nome;
 						_this._paisValue = result.endereco.pais.nome;
@@ -201,6 +221,12 @@ export class BizIntegrator implements ComponentFramework.StandardControl<IInputs
 						_this._dataAberturaValue = result.data_abertura;
 						_this._emailValue = result.email;
 						_this._telefoneValue = result.telefones[0].telefone;
+						_this._capitalSocialValue = result.capital_social;
+						_this._matrizFilialValue = result.tipo;
+						_this._situacaoValue = result.situacao;
+						_this._naturezaJuridicaValue = result.natureza_juridica.nome;
+						_this._porteValue = result.porte_empresa;
+
 
 						_this._CnaeCodValue = result.atividades.principal[0].codigo;
 						_this._CnaeDesValue = result.atividades.principal[0].nome;
