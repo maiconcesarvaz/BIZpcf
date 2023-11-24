@@ -25,6 +25,7 @@ export interface IInputs {
     cidade: ComponentFramework.PropertyTypes.StringProperty;
     estado: ComponentFramework.PropertyTypes.StringProperty;
     pais: ComponentFramework.PropertyTypes.StringProperty;
+    porte_empresa: ComponentFramework.PropertyTypes.StringProperty;
     telefoneComercial: ComponentFramework.PropertyTypes.StringProperty;
     CNAEcodigo: ComponentFramework.PropertyTypes.StringProperty;
     CNAEdescricao: ComponentFramework.PropertyTypes.StringProperty;
@@ -48,6 +49,7 @@ export interface IOutputs {
     cidade?: string;
     estado?: string;
     pais?: string;
+    porte_empresa?: string;
     telefoneComercial?: string;
     CNAEcodigo?: string;
     CNAEdescricao?: string;
