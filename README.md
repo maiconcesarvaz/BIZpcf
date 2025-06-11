@@ -7,9 +7,8 @@ https://cnpj.biz/microsoft-dynamics-365-integracao-dados-empresas-cnpj
 
 
 # Instalação no Dynamics 365
-1 - Baixar a solução disponível no link abaixo, em seguida importar em seu Dynamics a solução e nela obter a url para chamada do flow.
+1 - Baixar a solução disponível no link abaixo, em seguida importar em seu Dynamics.
 	https://github.com/maiconcesarvaz/BIZpcf/blob/master/DynamicsSolution/CnpjBiz_2_2_0_managed.zip
-![atl-text](https://github.com/maiconcesarvaz/BIZpcf/blob/master/ExemploConfig/urlFlow.JPG)  
 
 2 - Criar uma nova solução ou adicionar a entidade desejada na solução criada e em seguida mapear os campos:
 ![atl-text](https://github.com/maiconcesarvaz/BIZpcf/blob/master/ExemploConfig/ConfigSolution.gif)
