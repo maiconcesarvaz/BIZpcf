@@ -9,7 +9,7 @@ https://cnpj.biz/microsoft-dynamics-365-integracao-dados-empresas-cnpj
 # Instalação no Dynamics 365
 
 1 - Baixar a solução disponível no link abaixo, em seguida importar em seu Dynamics.
-	https://github.com/maiconcesarvaz/BIZpcf/blob/master/CnpjBiz_2_2_0_managed.zip
+	https://github.com/maiconcesarvaz/BIZpcf/blob/master/SolutionDynamics/CnpjBiz_2_2_0_managed.zip
 
 2 - Importar a solução CnpjBiz_2_2_0_managed. Criar uma nova solução ou adicionar a tabela desejada em uma solução criada, e em seguida mapear os campos.
 Passo a passo pode ser acompanhado na Gif abaixo:
